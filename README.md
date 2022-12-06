@@ -1,4 +1,4 @@
-# Tech-Blog
+# Tech-Blog :busts_in_silhouette:
 
 Tech-Blog is a CMS-style blog site similar to a Wordpress site, where developers can publish their blog posts and comment on other developers. This app was built completely from scratch and deployed to Heroku. Tech-Blog follows the MVC paradigm in its architectural structure, uses Handlebars.js as the templating language, Sequelize as the ORM, and express-session npm package for authentication.
 
