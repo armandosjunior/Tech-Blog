@@ -43,7 +43,6 @@ router.get('/dashboard', withAuuth, async (req, res) => {
           },
       ],
     });
-
     const post = postData.get({ plain: true });
 
     res.render('dashboard', {
@@ -84,8 +83,8 @@ router.get('/signup', (req, res) => {
     res.redirect('/dashboard');
     return;
   }
-
   res.render('signup');
 });
+
 
 module.exports = router;
