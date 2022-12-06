@@ -62,6 +62,6 @@ THEN I am able to view comments but I am prompted to log in again before I can a
 
 ## **Steps for Future Development:**
 ```
-- add more Javascript!
-- successfully be able to add more than one employee
+- keep reviewing code!
+- Design killer front end with time to come!!
 ```
