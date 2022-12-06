@@ -4,42 +4,27 @@ Tech-Blog is a CMS-style blog site similar to a Wordpress site, where developers
 
 ## **Steps to get started:**
 ```
-- npm i (+dependencies)
+- npm i (all dependencies)
 - node server.js
 ```
 
-## **Application Acceptance Criteria:**
-![Image of Project](./assets/images/criteria.png)
-
-
-## **Technology used:**
-```
-- Javascript
-- Node.js
-- Inquirer & Jest packages
-```
-
-## **Steps for future development:**
-```
-- add more Javascript!
-- successfully be able to add more than one employee
-```
-
-## **Steps to get started:**
-```
-- npm i
-- node index.js
-```
-
 ## **Mock Up:**
-![Image of Project](./assets/images/criteria.png)
+![Image of Project](./public/blog.png)
 
+## **Application Acceptance Criteria:**
+```
+```
 
 ## **Technology used:**
 ```
 - Javascript
 - Node.js
-- Inquirer & Jest packages
+- Handlebars.js
+- Sequelize
+- Express-session
+- MySQL2
+- dotenv package
+- bcrypt package
 ```
 
 ## **Steps for future development:**
