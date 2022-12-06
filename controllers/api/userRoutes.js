@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../../../../Class Repo/UofA-VIRT-FSF-PT-06-2022-U-LOLC/14-MVC/01-Activities/28-Stu_Mini-Project/Solved/models');
+const { User } = require('../../models');
 
 router.post('/', async (req, res) => {
   try {
@@ -18,7 +18,7 @@ router.post('/', async (req, res) => {
 
 router.post('/login', async (req, res) => {
   try {
-    const userData = await User.findOne({ where: { email: req.body.email } });
+    const userData = await User.findOne({ where: { username: req.body.username } });
 
     if (!userData) {
       res
@@ -44,18 +44,24 @@ router.post('/login', async (req, res) => {
     });
 
   } catch (err) {
+
     res.status(400).json(err);
   }
 });
 
 router.post('/logout', (req, res) => {
   if (req.session.logged_in) {
+
     req.session.destroy(() => {
       res.status(204).end();
+
     });
+
   } else {
     res.status(404).end();
+
   }
+  
 });
 
 module.exports = router;
