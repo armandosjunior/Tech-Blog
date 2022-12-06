@@ -1,49 +1,36 @@
 // import models
-const Product = require('./Product');
-const Category = require('./Category');
-const Tag = require('./Tag');
-const ProductTag = require('./ProductTag');
+const User = require('./User');
+const Post = require('./Post');
+const Comment = require('./Comment');
 
-/*Class refernce 
-
-Gallery.hasMany(Painting, {
-  foreignKey: 'gallery_id',
+User.hasMany(Post, {
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE'
 });
 
-Painting.belongsTo(Gallery, {
-    foreignKey: 'gallery_id',
-  });
-  */
-
-// Products belongsTo Category
-// Categories have many Products
-// Products belongToMany Tags (through ProductTag)
-// Tags belongToMany Products (through ProductTag)
-
-Product.belongsTo(Category, {
-    foreignKey: "category_id",
+//User has multiple comments
+User.hasMany(Comment, {
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE'
 });
 
-Category.hasMany(Product, {
-    foreignKey: "category_id",
-    onDelete: "SET NULL",
+//Posts that belong to User
+Post.belongsTo(User, {
+  foreignKey: 'user_id'
 });
 
-Product.belongsToMany(Tag, {
-    through: ProductTag,
-    foreignKey: "product_id",
+//Comments that belong to User
+Comment.belongsTo(User, {
+  foreignKey: 'user_id'
 });
 
-Tag.belongsToMany(Product, {
-    through: ProductTag,
-    foreignKey: "tag_id",
+//Comments that belond to Post
+Comment.belongsTo(Post, {
+  foreignKey: 'user_id'
 });
 
-
-
-module.exports = {
-    Product,
-    Category,
-    Tag,
-    ProductTag,
-  };
+//Post with multiple comments
+Post.hasMany(Comment, {
+  foreignKey: 'post_id'
+});
+module.exports = { User, Project };
