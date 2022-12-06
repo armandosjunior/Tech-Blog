@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../../../Class Repo/UofA-VIRT-FSF-PT-06-2022-U-LOLC/14-MVC/01-Activities/28-Stu_Mini-Project/Solved/models');
+const { User } = require('../../../../Class Repo/UofA-VIRT-FSF-PT-06-2022-U-LOLC/14-MVC/01-Activities/28-Stu_Mini-Project/Solved/models');
 
 router.post('/', async (req, res) => {
   try {
